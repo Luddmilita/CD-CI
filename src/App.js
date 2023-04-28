@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./App.css";
 
 export default function App() {
-  const [authenticated, setAuthenticated] = useState(false);
   const [todoInput, setTodoInput] = useState("");
   const [todos, setTodos] = useState([]);
 
@@ -34,16 +33,7 @@ export default function App() {
 
   return (
     <>
-      {!authenticated && (
-        <>
-          <h1>Login</h1>
-          <button type="button" onClick={() => setAuthenticated(true)}>
-            Click here to login
-          </button>
-        </>
-      )}
-
-      {authenticated && (
+        <h1>{`Test change name :)`}</h1>
         <>
           <h1>Add Todo</h1>
           <form onSubmit={onSubmit}>
@@ -88,7 +78,6 @@ export default function App() {
           <p>Total Todos: {todos.length}</p>
           <p>Selected Todos: {todos.filter((todo) => todo.selected).length}</p>
         </>
-      )}
     </>
   );
 }
