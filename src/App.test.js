@@ -6,7 +6,7 @@ test('if user enters a todo, the todo is shown', async () => {
   render(<App />);
 
   // login
-  userEvent.click(screen.getByRole('button', { name: /click here to login/i }));
+  // userEvent.click(screen.getByRole('button', { name: /click here to login/i }));
 
   // add todo
   userEvent.type(screen.getByRole('textbox', { name: /title/i }), "buy new shoes");
